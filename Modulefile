@@ -1,5 +1,5 @@
 name 'a2tar-openvpn'
-version '0.1.1'
+version '0.1.2'
 author 'A2TaR'
 license 'MIT License'
 source 'https://github.com/a2tar/openvpn.git'
