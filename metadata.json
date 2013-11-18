@@ -1,13 +1,30 @@
 {
   "name": "a2tar-openvpn",
   "version": "0.1.0",
-  "summary": "",
+  "summary": "puppet module: openvpn server on ubuntu",
   "author": "A2TaR",
   "description": "",
-  "dependencies": [],
+  "dependencies": [
+    {
+      "name": "attachmentgenie/ufw",
+      "version_requirement": "1.2.0"
+    },
+    {
+      "name": "puppetlabs/apt",
+      "version_requirement": "1.2.0"
+    },
+    {
+      "name": "a2tar/dnsmasq",
+      "version_requirement": "0.1.0"
+    },
+    {
+      "name": "a2tar/sysctl",
+      "version_requirement": "0.1.0"
+    }
+  ],
   "types": [],
   "checksums": {},
-  "source": "",
-  "project_page": "",
+  "source": "https://github.com/a2tar/openvpn.git",
+  "project_page": "https://github.com/a2tar/openvpn",
   "license": "MIT License"
 }

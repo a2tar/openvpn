@@ -1,11 +1,13 @@
 name    'a2tar-openvpn'
 version '0.1.0'
-source ''
+source 'https://github.com/a2tar/openvpn.git'
 author 'A2TaR'
 license 'MIT License'
-summary ''
+summary 'puppet module: openvpn server on ubuntu'
 description ''
-project_page ''
+project_page 'https://github.com/a2tar/openvpn'
 
-## Add dependencies, if any:
-# dependency 'username/name', '>= 1.2.0'
+dependency 'attachmentgenie/ufw', '>= 1.2.0'
+dependency 'puppetlabs/apt', '>= 1.4.0'
+dependency 'a2tar/dnsmasq', '0.1.0'
+dependency 'a2tar/sysctl', '>= 0.1.0'
