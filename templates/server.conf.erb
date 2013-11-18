@@ -1,0 +1,37 @@
+local    <%= ip %>
+port     <%= port %>
+proto    <%= proto %>
+dev      <%= dev %>
+
+ca       <%= ca %>/ca.crt
+cert     <%= ca %>/server.crt
+key      <%= ca %>/server.key
+dh       <%= ca %>/dh.pem
+tls-auth <%= ca %>/ta.key 0
+
+server   <%= local_net %> <%= local_mask %>
+
+ifconfig-pool-persist ipp.txt
+<% if duplicate_cn %>
+duplicate-cn
+<% end %>
+keepalive 10 120
+
+cipher <%= cipher %>
+
+comp-lzo
+;max-clients 100
+
+user nobody
+group nogroup
+
+persist-key
+persist-tun
+
+status     <%= status_log %>
+log        <%= log %>
+log-append <%= log_append %>
+verb       <%= verb %>
+
+push "dhcp-option DNS <%= local_ip %>"
+push "redirect-gateway def1"
